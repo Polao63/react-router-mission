@@ -7,6 +7,8 @@ import NotFound from "./NotFound";
 export default function PostDetail({posts, onDelete}){
   const { id } = useParams();
   const postId = Number(id)
+  
+  let navigate = useNavigate();
 
   const post = posts.find((data) => {return data.id === postId});
 
@@ -18,7 +20,6 @@ export default function PostDetail({posts, onDelete}){
     )
   }
 
-  let navigate = useNavigate();
 
   return(
       <div>
